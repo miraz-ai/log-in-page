@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Password</title>
+    <link rel="stylesheet" href="css/newpass.css">
+</head>
+<body>
+    <body>
+
+<div class="login">
+  <div class="textlogin">
+    <label>Confirm New Password</label>
+  </div>
+
+  <div class="input-group">
+    <input type="password" id="password" placeholder="New Password">
+    <button type="button" class="toggle-btn" onclick="togglePass('password', this)">👁️</button>
+  </div>
+
+  <div class="input-group">
+    <input type="password" id="confirmpassword" placeholder="Confirm New Password">
+    <button type="button" class="toggle-btn" onclick="togglePass('confirmpassword', this)">👁️</button>
+  </div>
+
+  <div class="login-button">
+    <a href="main.html" target="_blank">
+      <button type="button">Login</button>
+    </a>
+  </div>
+</div>
+
+<script>
+  function togglePass(id, btn) {
+    const input = document.getElementById(id);
+    const isHidden = input.type === "password";
+    input.type = isHidden ? "text" : "password";
+    btn.textContent = isHidden ? "🙈" : "👁️";
+  }
+</script>
+
+</body>
+</html>
